@@ -1,0 +1,118 @@
+/* Dark theme */
+body {
+    background: #121212;
+    color: #fff;
+    padding-top: 70px;
+    /* Add padding to the top to accommodate fixed navbar */
+}
+
+/* Style for the media articles */
+.media {
+    margin-bottom: 20px;
+    background-color: #1e1e1e;
+    border: 1px solid #333;
+    border-radius: 5px;
+    padding: 15px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.media:hover {
+    background-color: #272727;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+}
+
+
+/* Style for article metadata */
+.article-metadata {
+    margin-bottom: 10px;
+}
+
+.article-metadata a {
+    color: #3498db;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.article-metadata a:hover {
+    color: #2980b9;
+}
+
+/* Style for article titles */
+.article-title {
+    color: #fff;
+    font-size: 1.8rem;
+    margin-bottom: 5px;
+    transition: color 0.3s ease;
+}
+
+.article-title:hover {
+    color: #bbb;
+}
+
+/* Style for article content */
+.article-content {
+    color: #ccc;
+    line-height: 1.6;
+}
+
+/* Style for the date posted */
+.text-muted {
+    color: #999;
+}
+
+/* Add a subtle transition for all elements */
+* {
+    transition: all 0.3s ease;
+}
+
+/* Navbar styling */
+.site-header {
+    background-color: #343a40;
+    /* Dark background color */
+    padding: 30px 0;
+}
+
+.navbar-brand {
+    color: #00ffa2 !important;
+    /* White text for brand */
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.nav-item {
+    margin-right: 15px;
+}
+
+.nav-link {
+    color: #fff !important;
+    /* White text for links */
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #a73f28 !important;
+    /* Green color on hover */
+}
+
+/* Optional: Add this to remove the link underline */
+.navbar-nav .nav-link {
+    text-decoration: none !important;
+}
+
+/* Optional: Add this to increase the spacing between navbar links */
+.navbar-nav {
+    margin-left: auto;
+}
+
+/* Optional: Add this to center the navbar links vertically */
+.navbar-nav {
+    align-items: center;
+}
+
+/* Optional: Add this to make the navbar sticky */
+.site-header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}

@@ -3,7 +3,7 @@ body {
     background: #121212;
     color: #fff;
     padding-top: 70px;
-    /* Add padding to the top to accommodate fixed navbar */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 /* Style for the media articles */
@@ -11,16 +11,15 @@ body {
     margin-bottom: 20px;
     background-color: #1e1e1e;
     border: 1px solid #333;
-    border-radius: 5px;
-    padding: 15px;
+    border-radius: 10px;
+    padding: 20px;
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .media:hover {
     background-color: #272727;
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
 }
-
 
 /* Style for article metadata */
 .article-metadata {
@@ -39,20 +38,23 @@ body {
 
 /* Style for article titles */
 .article-title {
-    color: #fff;
-    font-size: 1.8rem;
-    margin-bottom: 5px;
+    color: #fbfbfb;
+    font-size: 2rem;
+    margin-bottom: 10px;
     transition: color 0.3s ease;
+    text-decoration: none;
 }
 
 .article-title:hover {
-    color: #bbb;
+    color: #e0dad9;
+    text-decoration: none;
+
 }
 
 /* Style for article content */
 .article-content {
     color: #ccc;
-    line-height: 1.6;
+    line-height: 1.8;
 }
 
 /* Style for the date posted */
@@ -60,38 +62,29 @@ body {
     color: #999;
 }
 
-/* Add a subtle transition for all elements */
-* {
-    transition: all 0.3s ease;
-}
-
 /* Navbar styling */
 .site-header {
     background-color: #343a40;
-    /* Dark background color */
     padding: 30px 0;
 }
 
 .navbar-brand {
     color: #00ffa2 !important;
-    /* White text for brand */
     font-weight: bold;
-    font-size: 1.5rem;
+    font-size: 2rem;
 }
 
 .nav-item {
-    margin-right: 15px;
+    margin-right: 20px;
 }
 
 .nav-link {
     color: #fff !important;
-    /* White text for links */
     transition: color 0.3s ease;
 }
 
 .nav-link:hover {
     color: #a73f28 !important;
-    /* Green color on hover */
 }
 
 /* Optional: Add this to remove the link underline */
@@ -115,4 +108,22 @@ body {
     width: 100%;
     top: 0;
     z-index: 1000;
+}
+
+/* Additional styling for post images */
+.post-image-container {
+    overflow: hidden;
+    border-radius: 10px;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.post-image {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s;
+}
+
+.post-image:hover {
+    transform: scale(1.05);
 }

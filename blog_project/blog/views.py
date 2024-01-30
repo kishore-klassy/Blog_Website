@@ -50,11 +50,12 @@ def login_view(request):
 def create_post(request):
     
     if request.method == 'POST' :
-        form = CreatePostForm(request.POST)
+        form = CreatePostForm(request.POST,request.FILES)
         if form.is_valid():
             title = form.cleaned_data['title']
             content = form.cleaned_data['content']
-            new_post = Post.objects.create(title=title, content=content, author=request.user)
+            post_image = form.cleaned_data['post_image']
+            new_post = Post.objects.create(title=title, content=content, author=request.user,post_image=post_image)
             new_post.save()
             return redirect('blog-home')
     else :

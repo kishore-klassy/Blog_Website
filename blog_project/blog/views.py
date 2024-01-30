@@ -1,6 +1,6 @@
 # views.py
 from django.shortcuts import redirect, render
-from .forms import SignUpForm
+from .forms import CreatePostForm, SignUpForm
 from .models import Post
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth import authenticate, login
@@ -47,3 +47,16 @@ def login_view(request):
 
     return render(request, 'blog/login.html', {'form': form})
 
+def create_post(request):
+    
+    if request.method == 'POST' :
+        form = CreatePostForm(request.POST)
+        if form.is_valid():
+            title = form.cleaned_data['title']
+            content = form.cleaned_data['content']
+            new_post = Post.objects.create(title=title, content=content, author=request.user)
+            new_post.save()
+            return redirect('blog-home')
+    else :
+        form = CreatePostForm()
+        return render(request,'blog/createpost.html',{'form':form})

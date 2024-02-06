@@ -127,3 +127,19 @@ body {
 .post-image:hover {
     transform: scale(1.05);
 }
+
+.profile-pic {
+    width: 60px;
+    /* Set the width as per your design */
+    height: 60px;
+    /* Set the height as per your design */
+}
+
+.profile-logo img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    /* Ensures the image covers the entire container */
+    border-radius: 150%;
+    /* Makes the image round for a profile picture effect */
+}

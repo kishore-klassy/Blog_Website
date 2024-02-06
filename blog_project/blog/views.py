@@ -3,12 +3,15 @@ from django.shortcuts import redirect, render
 from .forms import CreatePostForm, SignUpForm
 from .models import Post
 from django.contrib.auth.forms import AuthenticationForm
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login,logout
 from django.shortcuts import render, redirect
+from django.contrib.auth.decorators import login_required
+
+@login_required
 def home(request):
     posts = Post.objects.all()
     return render(request, 'blog/home.html', context={'posts': posts})
-
+@login_required
 def about(request):
     return render(request, 'blog/about.html')
 
@@ -60,4 +63,8 @@ def create_post(request):
             return redirect('blog-home')
     else :
         form = CreatePostForm()
-        return render(request,'blog/createpost.html',{'form':form})
+        return    (request,'blog/createpost.html',{'form':form})
+
+def logout_view(request):
+    logout(request)
+    return redirect(login_view)

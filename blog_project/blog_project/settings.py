@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-x+c!_#5igwzi9q=w@6xq4)bvs@q8*b2+&dwbxy(7&+))0lsu(3
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['.vercel.app']
+ALLOWED_HOSTS = ['127.0.0.1', '.vercel.app']
 
 
 # Application definition
@@ -126,3 +126,6 @@ AUTH_USER_MODEL = 'blog.CustomUser'
 MEDIA_ROOT = BASE_DIR / "media"
 MEDIA_URL = "/media/"
 LOGIN_URL = 'log-in'
+
+
+WSGI_APPLICATION = 'vercel_app.wsgi.app'

@@ -16,7 +16,7 @@ class Post(models.Model):
     content = models.TextField(verbose_name="Post Content", null=True, blank=True)
     date_posted = models.DateTimeField(default=timezone.now, verbose_name="Post Created Date")
     post_image = models.ImageField(upload_to='media/', null=True, blank=True)
-
+    #likes = models.IntegerField()
     def time_since_posted(self):
         return humanize.naturaltime(self.date_posted)
 
